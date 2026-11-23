@@ -1,4 +1,4 @@
-/*  GLOBAL RULES & BRAND COLOR TOKENS (مستوحاة من ألوان شعار السمو)  */
+/*  GLOBAL RULES & BRAND COLOR TOKENS */
     :root {
       --color-green: #008F39;
       --color-green-dark: #006D2B;
@@ -142,9 +142,7 @@
       transform: translateY(-2px);
     }
 
-    /* ========================================================================
-       2. STICKY NAVIGATION BAR & RESPONSIVE BURGER MENU
-       ======================================================================== */
+    /* 2. STICKY NAVIGATION BAR & RESPONSIVE BURGER MENU */
     .navbar {
       position: sticky;
       top: 0;
@@ -295,9 +293,7 @@
       }
     }
 
-    /* ========================================================================
-       3. HERO SECTION (3 Slides, Auto Every 4s + Left/Right Controls)
-       ======================================================================== */
+    /* 3. HERO SECTION (3 Slides, Auto Every 4s + Left/Right Controls) */
     .hero {
       position: relative;
       height: 540px;
@@ -450,9 +446,7 @@
       }
     }
 
-    /* ========================================================================
-       4. ABOUT US CARDS (Vision, Mission, Goals)
-       ======================================================================== */
+    /* 4. ABOUT US CARDS (Vision, Mission, Goals) */
     .cards-grid-3 {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -518,9 +512,7 @@
       }
     }
 
-    /* ========================================================================
-       5. FEATURED PROJECTS (Periodic Horizontal Slider: Left to Right)
-       ======================================================================== */
+    /* 5. FEATURED PROJECTS (Periodic Horizontal Slider: Left to Right) */
     .marquee-box {
       width: 100%;
       overflow: hidden;
@@ -633,9 +625,7 @@
       gap: 4px;
     }
 
-    /* ========================================================================
-       6. STATISTICS SECTION (3 Ascending Counter Cards)
-       ======================================================================== */
+    /* 6. STATISTICS SECTION (3 Ascending Counter Cards) */
     .stat-card {
       background-color: var(--color-surface);
       border: 1px solid var(--color-border);
@@ -676,9 +666,7 @@
       color: var(--color-dark);
     }
 
-    /* ========================================================================
-       7. CONTACT FORM (5 Fields -> a.a.raheem.hamdi@gmail.com)
-       ======================================================================== */
+    /* 7. CONTACT FORM (5 Fields -> a.a.raheem.hamdi@gmail.com) */
     .contact-wrap {
       max-width: 740px;
       margin: 0 auto;
@@ -776,9 +764,7 @@
       }
     }
 
-    /* ========================================================================
-       8. FOOTER
-       ======================================================================== */
+    /* 8. FOOTER */
     .footer {
       background-color: var(--color-dark);
       color: var(--color-white);
