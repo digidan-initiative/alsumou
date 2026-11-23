@@ -5,23 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>منظمة السمو الخيرية | Al-Sumou Charity Organization</title>
 
-  <!-- خط Cairo مع خطوط عربية بديلة متناسقة في حال عدم توفر الإنترنت -->
+  <!--CSS & Google Fonts: Cairo-->
+  <link rel="stylesheet" href="css/style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
-
-  <!-- CSS مخصص -->
-  <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
 
-  <!-- ======================================================================
-       STICKY NAVIGATION BAR
-       ====================================================================== -->
+  <!-- STICKY NAVIGATION BAR -->
   <header class="navbar">
     <div class="container navbar-inner">
       <a href="#home" class="brand">
-        <!-- شعار منظمة السمو الخيرية -->
+        <!-- Logo -->
         <img class="brand-logo" src="./img/logo.jpg" alt="logo">
         <span class="brand-text">
           <span class="brand-name" data-i18n="org_name">منظمة السمو الخيرية</span>
@@ -62,13 +58,10 @@
   </header>
 
   <main>
-    <!-- ====================================================================
-         1) HERO SECTION (3 Slides, Auto Every 4s + Left/Right Arrows)
-         ==================================================================== -->
+    <!-- 1) HERO SECTION (Slides, Auto Every 6s + Left/Right Arrows For Large Screens Only)-->
     <section id="home" class="hero">
-      <!-- الشريحة الأولى -->
+      <!-- Slide #1 -->
       <div class="hero-slide active">
-        <!-- صورة الهيرو 1: يمكنك استبدال رابط src بمسار صورتك المحلية مثل images/hero-1.jpg -->
         <img
           src="./img/test3.jpg"
           alt="العمل الخيري والإغاثي لمنظمة السمو"
@@ -86,9 +79,8 @@
         </div>
       </div>
 
-      <!-- الشريحة الثانية -->
+      <!-- Slide #2 -->
       <div class="hero-slide">
-        <!-- صورة الهيرو 2: يمكنك استبدال رابط src بمسار صورتك المحلية مثل images/hero-2.jpg -->
         <img
           src="./img/test4.jpg"
           alt="قوافل الخير وتوزيع السلال الغذائية"
@@ -106,9 +98,8 @@
         </div>
       </div>
 
-      <!-- الشريحة الثالثة -->
+      <!-- Slide #3 -->
       <div class="hero-slide">
-        <!-- صورة الهيرو 3: يمكنك استبدال رابط src بمسار صورتك المحلية مثل images/hero-3.jpg -->
         <img
           src="./img/test1.jpg"
           alt="التنمية المستدامة ودعم التعليم"
@@ -145,9 +136,7 @@
       </div>
     </section>
 
-    <!-- ====================================================================
-         2) ABOUT US SECTION (Vision, Mission, Goals Cards)
-         ==================================================================== -->
+    <!-- 2) ABOUT US SECTION (Vision, Mission, Goals) -->
     <section id="about" class="section">
       <div class="container">
         <div class="section-header">
@@ -191,9 +180,7 @@
       </div>
     </section>
 
-    <!-- ====================================================================
-         3) FEATURED PROJECTS (Periodic Horizontal Slider: Left to Right)
-         ==================================================================== -->
+    <!-- 3) FEATURED PROJECTS (Periodic Horizontal Slider: Left to Right)-->
     <section id="projects" class="section section-alt">
       <div class="container">
         <div class="section-header">
@@ -208,9 +195,7 @@
       </div>
     </section>
 
-    <!-- ====================================================================
-         4) STATISTICS SECTION (3 Ascending Counter Cards)
-         ==================================================================== -->
+    <!-- 4) STATISTICS SECTION (3) Ascending Counter)-->
     <section id="stats" class="section">
       <div class="container">
         <div class="section-header">
@@ -252,9 +237,7 @@
       </div>
     </section>
 
-    <!-- ====================================================================
-         5) CONTACT SECTION (5 Fields -> a.a.raheem.hamdi@gmail.com)
-         ==================================================================== -->
+    <!-- 5) CONTACT SECTION (5) Fields -> a.a.raheem.hamdi@gmail.com) -->
     <section id="contact" class="section section-alt">
       <div class="container contact-wrap">
         <div class="section-header">
@@ -301,9 +284,7 @@
     </section>
   </main>
 
-  <!-- ======================================================================
-       6) FOOTER
-       ====================================================================== -->
+  <!-- 6) FOOTER -->
   <footer class="footer">
     <div class="container">
       <div class="footer-grid">
@@ -354,13 +335,12 @@
     </div>
   </footer>
 
-  <!-- ======================================================================
-       CLEAN VANILLA JAVASCRIPT (Bilingual, Slider, Counters, Form)
-       ====================================================================== -->
+  <!-- VANILLA JAVASCRIPT (Bilingual, Slider, Counters, Form) -->
   <script>
     (function () {
       'use strict';
 
+      /*BILINGUAL*/
       const dict = {
         ar: {
           org_name: 'منظمة السمو الخيرية',
@@ -482,10 +462,10 @@
         }
       };
 
-      // بيانات أحدث 5 مشاريع (يمكنك استبدال روابط image بمسارات محلية مثل images/project-1.jpg لاحقاً)
+      
+      /*PROJECTS*/
       const projects = [
         {
-          // صورة المشروع 1: استبدل الرابط بـ images/project-1.jpg عند الحاجة
           image: './img/test8.jpg',
           title_ar: 'مشروع سلة الخير الغذائية',
           title_en: 'Goodness Food Basket Project',
@@ -497,7 +477,6 @@
           loc_en: 'Khartoum'
         },
         {
-          // صورة المشروع 2: استبدل الرابط بـ images/project-2.jpg عند الحاجة
           image: './img/test9.jpg',
           title_ar: 'القافلة الطبية العلاجية الشاملة',
           title_en: 'Comprehensive Medical Relief Convoy',
@@ -509,7 +488,6 @@
           loc_en: 'Al Jazirah'
         },
         {
-          // صورة المشروع 3: استبدل الرابط بـ images/project-3.jpg عند الحاجة
           image: './img/test11.jpg',
           title_ar: 'مبادرة كفالة ورعاية الأيتام',
           title_en: 'Orphan Care & Sponsorship Initiative',
@@ -521,7 +499,6 @@
           loc_en: 'Omdurman'
         },
         {
-          // صورة المشروع 4: استبدل الرابط بـ images/project-4.jpg عند الحاجة
           image: './img/test7.jpg',
           title_ar: 'مبادرة سقيا الماء والإصحاح البيئي',
           title_en: 'Clean Water & Sanitation Initiative',
@@ -533,7 +510,6 @@
           loc_en: 'Bahri'
         },
         {
-          // صورة المشروع 5: استبدل الرابط بـ images/project-5.jpg عند الحاجة
           image: './img/test4.jpg',
           title_ar: 'مشروع الحقيبة المدرسية ودعم التعليم',
           title_en: 'School Bag & Education Support',
@@ -548,7 +524,7 @@
 
       let lang = 'ar';
 
-      // عرض بطاقات المشاريع الخمسة مكررة مرة واحدة لحركة شريطية مستمرة من اليسار لليمين
+      /*PROJECTS SLIDING*/
       function renderProjects() {
         const track = document.getElementById('projectsTrack');
         if (!track) return;
@@ -582,8 +558,9 @@
         track.innerHTML = html + html;
       }
 
-      // التبديل الفوري بين العربية والإنجليزية
-      function setLanguage(nextLang) {
+
+      /*BILINGUAL SWITCHING*/
+        function setLanguage(nextLang) {
         lang = nextLang;
         document.documentElement.lang = nextLang;
         document.documentElement.dir = nextLang === 'ar' ? 'rtl' : 'ltr';
@@ -606,7 +583,7 @@
         setLanguage(lang === 'ar' ? 'en' : 'ar');
       });
 
-      // قائمة الهواتف Burger Bar
+      /*MOBILE MENU*/
       const burgerBtn = document.getElementById('burgerBtn');
       const mobileDrawer = document.getElementById('mobileDrawer');
       const burgerOpen = document.getElementById('burgerOpen');
@@ -627,7 +604,7 @@
         link.addEventListener('click', () => setDrawer(false));
       });
 
-      // سلايدر الهيرو (تبديل تلقائي كل 4 ثوانٍ + أزرار يمين ويسار)
+      /*HERO SLIDER*/
       const slides = document.querySelectorAll('.hero-slide');
       const dots = document.querySelectorAll('.hero-dot');
       let slideIdx = 0;
@@ -663,7 +640,7 @@
 
       restartTimer();
 
-      // العدادات التصاعدية للإحصائيات
+      /*STATS COUNTERS*/
       const counters = document.querySelectorAll('.counter');
       let counted = false;
 
@@ -698,7 +675,7 @@
         runCounters();
       }
 
-      // نموذج اتصل بنا مع التحقق من الاتصال بالإنترنت قبل الإرسال
+      /*CONTACT FORM*/
       const feedback = document.getElementById('formFeedback');
 
       function showFeedback(msg, isError) {
