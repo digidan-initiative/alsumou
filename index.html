@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>منظمة السمو الخيرية | Al-Sumou Charity Organization</title>
+
+  <!-- خط Cairo مع خطوط عربية بديلة متناسقة في حال عدم توفر الإنترنت -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
+
+  <!-- CSS مخصص -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ======================================================================
+       STICKY NAVIGATION BAR
+       ====================================================================== -->
+  <header class="navbar">
+    <div class="container navbar-inner">
+      <a href="#home" class="brand">
+        <!-- شعار منظمة السمو الخيرية -->
+        <img class="brand-logo" src="./img/logo.jpg" alt="logo">
+        <span class="brand-text">
+          <span class="brand-name" data-i18n="org_name">منظمة السمو الخيرية</span>
+          <span class="brand-tagline" data-i18n="org_tagline">عطاءٌ يسمو بالإنسان</span>
+        </span>
+      </a>
+
+      <nav class="nav-links" aria-label="التنقل الرئيسي">
+        <a href="#home" data-i18n="nav_home">الرئيسية</a>
+        <a href="#about" data-i18n="nav_about">من نحن</a>
+        <a href="#projects" data-i18n="nav_projects">المشاريع</a>
+        <a href="#stats" data-i18n="nav_stats">إحصائيات</a>
+        <a href="#contact" data-i18n="nav_contact">اتصل بنا</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button id="langToggle" type="button" class="lang-btn">EN</button>
+        <button id="burgerBtn" type="button" class="burger-btn" aria-label="القائمة" aria-expanded="false">
+          <svg id="burgerOpen" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+          <svg id="burgerClose" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24" style="display:none">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <div id="mobileDrawer" class="mobile-drawer">
+      <ul>
+        <li><a href="#home" class="drawer-link" data-i18n="nav_home">الرئيسية</a></li>
+        <li><a href="#about" class="drawer-link" data-i18n="nav_about">من نحن</a></li>
+        <li><a href="#projects" class="drawer-link" data-i18n="nav_projects">المشاريع</a></li>
+        <li><a href="#stats" class="drawer-link" data-i18n="nav_stats">إحصائيات</a></li>
+        <li><a href="#contact" class="drawer-link" data-i18n="nav_contact">اتصل بنا</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+    <!-- ====================================================================
+         1) HERO SECTION (3 Slides, Auto Every 4s + Left/Right Arrows)
+         ==================================================================== -->
+    <section id="home" class="hero">
+      <!-- الشريحة الأولى -->
+      <div class="hero-slide active">
+        <!-- صورة الهيرو 1: يمكنك استبدال رابط src بمسار صورتك المحلية مثل images/hero-1.jpg -->
+        <img
+          src="./img/test3.jpg"
+          alt="العمل الخيري والإغاثي لمنظمة السمو"
+          class="hero-img"
+        />
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+          <span class="badge" data-i18n="hero_badge_1">معاً نصنع الأمل</span>
+          <h1 class="hero-title" data-i18n="hero_title_1">نمدّ أيادي العطاء لنرتقي بالإنسان والمجتمع</h1>
+          <p class="hero-desc" data-i18n="hero_desc_1">تعمل منظمة السمو الخيرية على تقديم الإغاثة العاجلة والمشاريع التنموية المستدامة للأسر المتعففة في مختلف ولايات السودان.</p>
+          <div class="hero-actions">
+            <a href="#projects" class="btn btn-green" data-i18n="hero_cta_1">استكشف مشاريعنا</a>
+            <a href="#contact" class="btn btn-light" data-i18n="hero_cta_2">تواصل معنا</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- الشريحة الثانية -->
+      <div class="hero-slide">
+        <!-- صورة الهيرو 2: يمكنك استبدال رابط src بمسار صورتك المحلية مثل images/hero-2.jpg -->
+        <img
+          src="./img/test4.jpg"
+          alt="قوافل الخير وتوزيع السلال الغذائية"
+          class="hero-img"
+          loading="lazy"
+        />
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+          <span class="badge badge-red" data-i18n="hero_badge_2">التكافل الاجتماعي</span>
+          <h2 class="hero-title" data-i18n="hero_title_2">قوافل الخير والسلال الغذائية لكل محتاج</h2>
+          <p class="hero-desc" data-i18n="hero_desc_2">نصل إلى المناطق الأكثر احتياجاً لتأمين الغذاء والدواء والمياه الصالحة للشرب بكرامة وشفافية تامة.</p>
+          <div class="hero-actions">
+            <a href="#about" class="btn btn-green" data-i18n="hero_cta_3">تعرف علينا</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- الشريحة الثالثة -->
+      <div class="hero-slide">
+        <!-- صورة الهيرو 3: يمكنك استبدال رابط src بمسار صورتك المحلية مثل images/hero-3.jpg -->
+        <img
+          src="./img/test1.jpg"
+          alt="التنمية المستدامة ودعم التعليم"
+          class="hero-img"
+          loading="lazy"
+        />
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+          <span class="badge" data-i18n="hero_badge_3">التنمية المستدامة</span>
+          <h2 class="hero-title" data-i18n="hero_title_3">نستثمر في التعليم وتمكين الأسر المنتجة</h2>
+          <p class="hero-desc" data-i18n="hero_desc_3">برامج نوعية لدعم الطلاب والأيتام وتدريب الأسر لتحويل الاحتياج إلى إنتاج واكتفاء ذاتي مستدام.</p>
+          <div class="hero-actions">
+            <a href="#stats" class="btn btn-green" data-i18n="hero_cta_4">إنجازاتنا بالأرقام</a>
+          </div>
+        </div>
+      </div>
+
+      <button id="heroPrevLeft" type="button" class="hero-arrow hero-arrow-left" aria-label="السابق">
+        <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/>
+        </svg>
+      </button>
+
+      <button id="heroNextRight" type="button" class="hero-arrow hero-arrow-right" aria-label="التالي">
+        <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/>
+        </svg>
+      </button>
+
+      <div class="hero-dots" id="heroDots">
+        <button type="button" class="hero-dot active" data-slide="0" aria-label="الشريحة 1"></button>
+        <button type="button" class="hero-dot" data-slide="1" aria-label="الشريحة 2"></button>
+        <button type="button" class="hero-dot" data-slide="2" aria-label="الشريحة 3"></button>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         2) ABOUT US SECTION (Vision, Mission, Goals Cards)
+         ==================================================================== -->
+    <section id="about" class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="badge" data-i18n="about_badge">هويتنا وقيمنا</span>
+          <h2 class="section-title" data-i18n="about_title">من نحن</h2>
+          <p class="section-subtitle" data-i18n="about_subtitle">منظمة السمو الخيرية هي مؤسسة طوعية إنسانية وتنموية تسعى لترسيخ قيم التكافل والتراحم، وتقديم حلول مستدامة ترفع المعاناة وتبني الإنسان.</p>
+        </div>
+
+        <div class="cards-grid-3">
+          <article class="about-card">
+            <div class="icon-box icon-green">
+              <svg width="26" height="26" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+                <path stroke-linecap="round" stroke-linejoin="round" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/>
+              </svg>
+            </div>
+            <h3 data-i18n="vision_title">الرؤية</h3>
+            <p data-i18n="vision_text">الريادة والتميز في العمل الإنساني والتنموي المستدام لبناء مجتمع سوداني متكافل ينعم أفراده بالكرامة والعدالة والازدهار.</p>
+          </article>
+
+          <article class="about-card">
+            <div class="icon-box icon-red">
+              <svg width="26" height="26" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+              </svg>
+            </div>
+            <h3 data-i18n="mission_title">الرسالة</h3>
+            <p data-i18n="mission_text">تقديم العون الإغاثي العاجل، والرعاية الصحية والتعليمية، وتمكين الأسر المتعففة والشباب عبر مبادرات نوعية ومشاريع تنموية ذات أثر مستدام.</p>
+          </article>
+
+          <article class="about-card">
+            <div class="icon-box icon-green">
+              <svg width="26" height="26" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+              </svg>
+            </div>
+            <h3 data-i18n="goals_title">الأهداف</h3>
+            <p data-i18n="goals_text">تعزيز ثقافة التطوع والتكافل المجتمعي، كفالة الأيتام والطلاب، توفير المياه النقية، وتأهيل الأسر المنتجة لتحقيق الاكتفاء الذاتي.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         3) FEATURED PROJECTS (Periodic Horizontal Slider: Left to Right)
+         ==================================================================== -->
+    <section id="projects" class="section section-alt">
+      <div class="container">
+        <div class="section-header">
+          <span class="badge" data-i18n="projects_badge">أثرٌ ملموس على الأرض</span>
+          <h2 class="section-title" data-i18n="projects_title">أبرز المشاريع</h2>
+          <p class="section-subtitle" data-i18n="projects_subtitle">نماذج من أحدث 5 مشاريع إغاثية وتنموية نفذتها المنظمة لخدمة أهلنا</p>
+        </div>
+      </div>
+
+      <div class="marquee-box" dir="ltr">
+        <div id="projectsTrack" class="marquee-track"></div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         4) STATISTICS SECTION (3 Ascending Counter Cards)
+         ==================================================================== -->
+    <section id="stats" class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="badge badge-red" data-i18n="stats_badge">مسيرة العطاء</span>
+          <h2 class="section-title" data-i18n="stats_title">إحصائيات وأرقام</h2>
+        </div>
+
+        <div class="cards-grid-3">
+          <div class="stat-card">
+            <div class="stat-icon" style="background-color: var(--color-green);">
+              <svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+              </svg>
+            </div>
+            <div class="stat-number" style="color: var(--color-green);" dir="ltr">+<span class="counter" data-target="9">0</span></div>
+            <p class="stat-label" data-i18n="stat_1_label">سنوات خبرة</p>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-icon" style="background-color: var(--color-red);">
+              <svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
+              </svg>
+            </div>
+            <div class="stat-number" style="color: var(--color-red);" dir="ltr"><span class="counter" data-target="119">0</span></div>
+            <p class="stat-label" data-i18n="stat_2_label">مشروع تم تنفيذه</p>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-icon" style="background-color: var(--color-dark);">
+              <svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/>
+              </svg>
+            </div>
+            <div class="stat-number" style="color: var(--color-dark);" dir="ltr"><span class="counter" data-target="120">0</span></div>
+            <p class="stat-label" data-i18n="stat_3_label">عضواً</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         5) CONTACT SECTION (5 Fields -> a.a.raheem.hamdi@gmail.com)
+         ==================================================================== -->
+    <section id="contact" class="section section-alt">
+      <div class="container contact-wrap">
+        <div class="section-header">
+          <span class="badge" data-i18n="contact_badge">نسعد بتواصلكم</span>
+          <h2 class="section-title" data-i18n="contact_title">اتصل بنا</h2>
+          <p class="section-subtitle" data-i18n="contact_subtitle">للاستفسارات، الشراكات، أو المساهمة في مشاريعنا الخيرية، يرجى تعبئة النموذج أدناه</p>
+        </div>
+
+        <form id="contactForm" class="contact-form">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="fullName" class="form-label" data-i18n="form_name">الاسم</label>
+              <input id="fullName" type="text" required class="form-control" placeholder="أدخل اسمك الكامل" data-i18n-placeholder="ph_name" />
+            </div>
+
+            <div class="form-group">
+              <label for="whatsapp" class="form-label" data-i18n="form_whatsapp">رقم واتساب (بمفتاح الدولة)</label>
+              <input id="whatsapp" type="tel" required dir="ltr" class="form-control" placeholder="+249 912 345 678" style="text-align:left" />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="email" class="form-label" data-i18n="form_email">الإيميل</label>
+              <input id="email" type="email" required dir="ltr" class="form-control" placeholder="name@example.com" style="text-align:left" />
+            </div>
+
+            <div class="form-group">
+              <label for="subject" class="form-label" data-i18n="form_subject">العنوان</label>
+              <input id="subject" type="text" required class="form-control" placeholder="موضوع الرسالة" data-i18n-placeholder="ph_subject" />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="inquiry" class="form-label" data-i18n="form_inquiry">الاستفسار</label>
+            <textarea id="inquiry" required class="form-control" placeholder="اكتب تفاصيل استفسارك هنا..." data-i18n-placeholder="ph_inquiry"></textarea>
+          </div>
+
+          <div id="formFeedback" class="form-feedback" role="status" aria-live="polite"></div>
+
+          <button type="submit" class="btn btn-green submit-btn" data-i18n="form_submit">إرسال</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- ======================================================================
+       6) FOOTER
+       ====================================================================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand">
+            <span class="footer-logo-wrap">
+              <img class="brand-logo" src="./img/logo.jpg" alt="logo">
+            </span>
+            <strong style="font-size:1.15rem" data-i18n="org_name">منظمة السمو الخيرية</strong>
+          </div>
+          <p class="footer-about" data-i18n="footer_about">مؤسسة إنسانية طوعية تعمل من أجل التكافل الاجتماعي، الإغاثة العاجلة، والتنمية المستدامة لخدمة الإنسان.</p>
+        </div>
+
+        <div>
+          <h3 data-i18n="footer_links_title">روابط سريعة</h3>
+          <ul class="footer-links">
+            <li><a href="#home" data-i18n="nav_home">الرئيسية</a></li>
+            <li><a href="#about" data-i18n="nav_about">من نحن</a></li>
+            <li><a href="#projects" data-i18n="nav_projects">المشاريع</a></li>
+            <li><a href="#stats" data-i18n="nav_stats">إحصائيات</a></li>
+            <li><a href="#contact" data-i18n="nav_contact">اتصل بنا</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 data-i18n="footer_social_title">تابعنا على منصات التواصل</h3>
+          <div class="social-row">
+            <a href="https://www.facebook.com/share/1AAyqiqdZZ/" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Facebook">
+              <svg width="19" height="19" fill="currentColor" viewBox="0 0 24 24"><path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c5.05-.5 9-4.76 9-9.95z"/></svg>
+            </a>
+            <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Instagram">
+              <svg width="19" height="19" fill="currentColor" viewBox="0 0 24 24"><path d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4H7.6m9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8 1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3z"/></svg>
+            </a>
+            <a href="https://wa.me/249000000000" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="WhatsApp">
+              <svg width="19" height="19" fill="currentColor" viewBox="0 0 24 24"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2m.01 1.67c2.2 0 4.26.86 5.82 2.42a8.225 8.225 0 0 1 2.41 5.83c0 4.54-3.7 8.23-8.24 8.23-1.48 0-2.93-.39-4.19-1.15l-.3-.17-3.12.82.83-3.04-.2-.32a8.188 8.188 0 0 1-1.26-4.38c.01-4.54 3.7-8.24 8.25-8.24z"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p data-i18n="footer_rights">© 2026 منظمة السمو الخيرية. جميع الحقوق محفوظة.</p>
+        <p>
+          <span data-i18n="dev_prefix">تم التطوير بواسطة مبادرة</span>
+          <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" class="dev-link" data-i18n="dev_brand">ديجيدان</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ======================================================================
+       CLEAN VANILLA JAVASCRIPT (Bilingual, Slider, Counters, Form)
+       ====================================================================== -->
+  <script>
+    (function () {
+      'use strict';
+
+      const dict = {
+        ar: {
+          org_name: 'منظمة السمو الخيرية',
+          org_tagline: 'عطاءٌ يسمو بالإنسان',
+          nav_home: 'الرئيسية',
+          nav_about: 'من نحن',
+          nav_projects: 'المشاريع',
+          nav_stats: 'إحصائيات',
+          nav_contact: 'اتصل بنا',
+          hero_badge_1: 'معاً نصنع الأمل',
+          hero_title_1: 'نمدّ أيادي العطاء لنرتقي بالإنسان والمجتمع',
+          hero_desc_1: 'تعمل منظمة السمو الخيرية على تقديم الإغاثة العاجلة والمشاريع التنموية المستدامة للأسر المتعففة في مختلف ولايات السودان.',
+          hero_cta_1: 'استكشف مشاريعنا',
+          hero_cta_2: 'تواصل معنا',
+          hero_badge_2: 'التكافل الاجتماعي',
+          hero_title_2: 'قوافل الخير والسلال الغذائية لكل محتاج',
+          hero_desc_2: 'نصل إلى المناطق الأكثر احتياجاً لتأمين الغذاء والدواء والمياه الصالحة للشرب بكرامة وشفافية تامة.',
+          hero_cta_3: 'تعرف علينا',
+          hero_badge_3: 'التنمية المستدامة',
+          hero_title_3: 'نستثمر في التعليم وتمكين الأسر المنتجة',
+          hero_desc_3: 'برامج نوعية لدعم الطلاب والأيتام وتدريب الأسر لتحويل الاحتياج إلى إنتاج واكتفاء ذاتي مستدام.',
+          hero_cta_4: 'إنجازاتنا بالأرقام',
+          about_badge: 'هويتنا وقيمنا',
+          about_title: 'من نحن',
+          about_subtitle: 'منظمة السمو الخيرية هي مؤسسة طوعية إنسانية وتنموية تسعى لترسيخ قيم التكافل والتراحم، وتقديم حلول مستدامة ترفع المعاناة وتبني الإنسان.',
+          vision_title: 'الرؤية',
+          vision_text: 'الريادة والتميز في العمل الإنساني والتنموي المستدام لبناء مجتمع سوداني متكافل ينعم أفراده بالكرامة والعدالة والازدهار.',
+          mission_title: 'الرسالة',
+          mission_text: 'تقديم العون الإغاثي العاجل، والرعاية الصحية والتعليمية، وتمكين الأسر المتعففة والشباب عبر مبادرات نوعية ومشاريع تنموية ذات أثر مستدام.',
+          goals_title: 'الأهداف',
+          goals_text: 'تعزيز ثقافة التطوع والتكافل المجتمعي، كفالة الأيتام والطلاب، توفير المياه النقية، وتأهيل الأسر المنتجة لتحقيق الاكتفاء الذاتي.',
+          projects_badge: 'أثرٌ ملموس على الأرض',
+          projects_title: 'أبرز المشاريع',
+          projects_subtitle: 'نماذج من أحدث 5 مشاريع إغاثية وتنموية نفذتها المنظمة لخدمة أهلنا',
+          stats_badge: 'مسيرة العطاء',
+          stats_title: 'إحصائيات وأرقام',
+          stat_1_label: 'سنوات خبرة',
+          stat_2_label: 'مشروع تم تنفيذه',
+          stat_3_label: 'عضواً',
+          contact_badge: 'نسعد بتواصلكم',
+          contact_title: 'اتصل بنا',
+          contact_subtitle: 'للاستفسارات، الشراكات، أو المساهمة في مشاريعنا الخيرية، يرجى تعبئة النموذج أدناه',
+          form_name: 'الاسم',
+          form_whatsapp: 'رقم واتساب (بمفتاح الدولة)',
+          form_email: 'الإيميل',
+          form_subject: 'العنوان',
+          form_inquiry: 'الاستفسار',
+          form_submit: 'إرسال',
+          ph_name: 'أدخل اسمك الكامل',
+          ph_subject: 'موضوع الرسالة',
+          ph_inquiry: 'اكتب تفاصيل استفسارك هنا...',
+          form_success: 'تم تجهيز رسالتك بنجاح! يتم الآن فتح تطبيق البريد لإرسالها إلى المنظمة.',
+          form_offline: 'أنت غير متصل بالإنترنت حالياً! يرجى التحقق من الاتصال وإعادة المحاولة.',
+          footer_about: 'مؤسسة إنسانية طوعية تعمل من أجل التكافل الاجتماعي، الإغاثة العاجلة، والتنمية المستدامة لخدمة الإنسان.',
+          footer_links_title: 'روابط سريعة',
+          footer_social_title: 'تابعنا على منصات التواصل',
+          footer_rights: '© 2026 منظمة السمو الخيرية. جميع الحقوق محفوظة.',
+          dev_prefix: 'تم التطوير بواسطة مبادرة',
+          dev_brand: 'ديجيدان'
+        },
+        en: {
+          org_name: 'Al-Sumou Charity Organization',
+          org_tagline: 'Giving That Elevates Humanity',
+          nav_home: 'Home',
+          nav_about: 'About Us',
+          nav_projects: 'Projects',
+          nav_stats: 'Statistics',
+          nav_contact: 'Contact Us',
+          hero_badge_1: 'Together We Create Hope',
+          hero_title_1: 'Extending Hands of Giving to Elevate Humanity',
+          hero_desc_1: 'Al-Sumou Charity Organization delivers urgent humanitarian relief and sustainable development projects to vulnerable families across Sudan.',
+          hero_cta_1: 'Explore Projects',
+          hero_cta_2: 'Contact Us',
+          hero_badge_2: 'Social Solidarity',
+          hero_title_2: 'Convoys of Goodness & Food Baskets for Every Family',
+          hero_desc_2: 'Reaching the most underserved communities to provide food, medicine, and clean drinking water with dignity and transparency.',
+          hero_cta_3: 'Learn About Us',
+          hero_badge_3: 'Sustainable Development',
+          hero_title_3: 'Investing in Education & Productive Families',
+          hero_desc_3: 'Targeted programs supporting students, orphans, and vocational training to foster self-reliance.',
+          hero_cta_4: 'Our Impact in Numbers',
+          about_badge: 'Our Identity & Values',
+          about_title: 'About Us',
+          about_subtitle: 'Al-Sumou Charity Organization is a voluntary humanitarian institution dedicated to social solidarity and sustainable human development.',
+          vision_title: 'Vision',
+          vision_text: 'Leadership and excellence in sustainable humanitarian and developmental work to build a cohesive society enjoying dignity and prosperity.',
+          mission_title: 'Mission',
+          mission_text: 'Providing urgent relief, healthcare, educational support, and empowering families and youth through impactful initiatives.',
+          goals_title: 'Goals',
+          goals_text: 'Promoting volunteerism, sponsoring orphans and students, providing clean water, and qualifying productive families for self-sufficiency.',
+          projects_badge: 'Tangible Ground Impact',
+          projects_title: 'Featured Projects',
+          projects_subtitle: 'Highlights of our latest 5 humanitarian and developmental projects serving communities',
+          stats_badge: 'Journey of Giving',
+          stats_title: 'Statistics & Impact',
+          stat_1_label: 'Years of Experience',
+          stat_2_label: 'Completed Projects',
+          stat_3_label: 'Active Members',
+          contact_badge: 'We Welcome Your Message',
+          contact_title: 'Contact Us',
+          contact_subtitle: 'For inquiries, partnerships, or contributing to our charitable initiatives, please fill out the form below',
+          form_name: 'Full Name',
+          form_whatsapp: 'WhatsApp Number (with Country Code)',
+          form_email: 'Email Address',
+          form_subject: 'Subject',
+          form_inquiry: 'Inquiry',
+          form_submit: 'Send Message',
+          ph_name: 'Enter your full name',
+          ph_subject: 'Message subject',
+          ph_inquiry: 'Write your inquiry details here...',
+          form_success: 'Your message is ready! Opening your email client to send it to Al-Sumou Charity.',
+          form_offline: 'You are currently offline! Please check your connection and try again.',
+          footer_about: 'A voluntary humanitarian organization working for social solidarity, urgent relief, and sustainable development.',
+          footer_links_title: 'Quick Links',
+          footer_social_title: 'Follow Us on Social Media',
+          footer_rights: '© 2026 Al-Sumou Charity Organization. All rights reserved.',
+          dev_prefix: 'Developed by',
+          dev_brand: 'DigiDan'
+        }
+      };
+
+      // بيانات أحدث 5 مشاريع (يمكنك استبدال روابط image بمسارات محلية مثل images/project-1.jpg لاحقاً)
+      const projects = [
+        {
+          // صورة المشروع 1: استبدل الرابط بـ images/project-1.jpg عند الحاجة
+          image: './img/test8.jpg',
+          title_ar: 'مشروع سلة الخير الغذائية',
+          title_en: 'Goodness Food Basket Project',
+          desc_ar: 'توزيع سلال غذائية متكاملة للأسر المتعففة والنازحة لتأمين احتياجاتهم الأساسية بكرامة.',
+          desc_en: 'Distributing comprehensive food baskets to vulnerable and displaced families to secure essential nutrition.',
+          date_ar: '15 مارس 2026',
+          date_en: '15 Mar 2026',
+          loc_ar: 'الخرطوم',
+          loc_en: 'Khartoum'
+        },
+        {
+          // صورة المشروع 2: استبدل الرابط بـ images/project-2.jpg عند الحاجة
+          image: './img/test9.jpg',
+          title_ar: 'القافلة الطبية العلاجية الشاملة',
+          title_en: 'Comprehensive Medical Relief Convoy',
+          desc_ar: 'تقديم الفحوصات الطبية المجانية وتوزيع الأدوية المنقذة للحياة بإشراف كوادر طبية متطوعة.',
+          desc_en: 'Offering free medical checkups and essential medicines supervised by volunteer medical specialists.',
+          date_ar: '18 يناير 2026',
+          date_en: '18 Jan 2026',
+          loc_ar: 'ولاية الجزيرة',
+          loc_en: 'Al Jazirah'
+        },
+        {
+          // صورة المشروع 3: استبدل الرابط بـ images/project-3.jpg عند الحاجة
+          image: './img/test11.jpg',
+          title_ar: 'مبادرة كفالة ورعاية الأيتام',
+          title_en: 'Orphan Care & Sponsorship Initiative',
+          desc_ar: 'برنامج رعاية شاملة للأيتام يشمل الكفالة المعيشية والصحية والدعم النفسي والاجتماعي المستمر.',
+          desc_en: 'Holistic orphan care program covering living expenses, healthcare, and continuous psychosocial support.',
+          date_ar: '28 فبراير 2026',
+          date_en: '28 Feb 2026',
+          loc_ar: 'أم درمان',
+          loc_en: 'Omdurman'
+        },
+        {
+          // صورة المشروع 4: استبدل الرابط بـ images/project-4.jpg عند الحاجة
+          image: './img/test7.jpg',
+          title_ar: 'مبادرة سقيا الماء والإصحاح البيئي',
+          title_en: 'Clean Water & Sanitation Initiative',
+          desc_ar: 'توفير مياه شرب نقية وحملات إصحاح بيئي ونظافة للوقاية من الأوبئة وتعزيز صحة المجتمع.',
+          desc_en: 'Providing safe drinking water and environmental sanitation campaigns to prevent epidemics and protect health.',
+          date_ar: '02 فبراير 2026',
+          date_en: '02 Feb 2026',
+          loc_ar: 'بحري',
+          loc_en: 'Bahri'
+        },
+        {
+          // صورة المشروع 5: استبدل الرابط بـ images/project-5.jpg عند الحاجة
+          image: './img/test4.jpg',
+          title_ar: 'مشروع الحقيبة المدرسية ودعم التعليم',
+          title_en: 'School Bag & Education Support',
+          desc_ar: 'توزيع الحقائب والأدوات المدرسية للطلاب المحتاجين لضمان استمرار تحصيلهم العلمي دون انقطاع.',
+          desc_en: 'Distributing school bags and stationery to underprivileged students to ensure uninterrupted education.',
+          date_ar: '10 ديسمبر 2025',
+          date_en: '10 Dec 2025',
+          loc_ar: 'بورتسودان',
+          loc_en: 'Port Sudan'
+        }
+      ];
+
+      let lang = 'ar';
+
+      // عرض بطاقات المشاريع الخمسة مكررة مرة واحدة لحركة شريطية مستمرة من اليسار لليمين
+      function renderProjects() {
+        const track = document.getElementById('projectsTrack');
+        if (!track) return;
+        const dir = lang === 'ar' ? 'rtl' : 'ltr';
+
+        const html = projects.map((p) => {
+          const title = lang === 'ar' ? p.title_ar : p.title_en;
+          const desc = lang === 'ar' ? p.desc_ar : p.desc_en;
+          const date = lang === 'ar' ? p.date_ar : p.date_en;
+          const loc = lang === 'ar' ? p.loc_ar : p.loc_en;
+
+          return `
+            <article class="project-card" dir="${dir}">
+              <div class="project-media">
+                <img src="${p.image}" alt="${title}" class="project-img" loading="lazy" />
+              </div>
+              <div class="project-body">
+                <div>
+                  <h3 class="project-title">${title}</h3>
+                  <p class="project-desc">${desc}</p>
+                </div>
+                <div class="project-footer" dir="ltr">
+                  <span class="project-date">${date}</span>
+                  <span class="project-loc">${loc}</span>
+                </div>
+              </div>
+            </article>
+          `;
+        }).join('');
+
+        track.innerHTML = html + html;
+      }
+
+      // التبديل الفوري بين العربية والإنجليزية
+      function setLanguage(nextLang) {
+        lang = nextLang;
+        document.documentElement.lang = nextLang;
+        document.documentElement.dir = nextLang === 'ar' ? 'rtl' : 'ltr';
+        document.getElementById('langToggle').textContent = nextLang === 'ar' ? 'EN' : 'عربي';
+
+        document.querySelectorAll('[data-i18n]').forEach((el) => {
+          const k = el.getAttribute('data-i18n');
+          if (dict[nextLang][k]) el.textContent = dict[nextLang][k];
+        });
+
+        document.querySelectorAll('[data-i18n-placeholder]').forEach((el) => {
+          const k = el.getAttribute('data-i18n-placeholder');
+          if (dict[nextLang][k]) el.placeholder = dict[nextLang][k];
+        });
+
+        renderProjects();
+      }
+
+      document.getElementById('langToggle').addEventListener('click', () => {
+        setLanguage(lang === 'ar' ? 'en' : 'ar');
+      });
+
+      // قائمة الهواتف Burger Bar
+      const burgerBtn = document.getElementById('burgerBtn');
+      const mobileDrawer = document.getElementById('mobileDrawer');
+      const burgerOpen = document.getElementById('burgerOpen');
+      const burgerClose = document.getElementById('burgerClose');
+
+      function setDrawer(open) {
+        mobileDrawer.classList.toggle('open', open);
+        burgerOpen.style.display = open ? 'none' : 'block';
+        burgerClose.style.display = open ? 'block' : 'none';
+        burgerBtn.setAttribute('aria-expanded', String(open));
+      }
+
+      burgerBtn.addEventListener('click', () => {
+        setDrawer(!mobileDrawer.classList.contains('open'));
+      });
+
+      document.querySelectorAll('.drawer-link').forEach((link) => {
+        link.addEventListener('click', () => setDrawer(false));
+      });
+
+      // سلايدر الهيرو (تبديل تلقائي كل 4 ثوانٍ + أزرار يمين ويسار)
+      const slides = document.querySelectorAll('.hero-slide');
+      const dots = document.querySelectorAll('.hero-dot');
+      let slideIdx = 0;
+      let timer = null;
+
+      function goToSlide(idx) {
+        slideIdx = (idx + slides.length) % slides.length;
+        slides.forEach((s, i) => s.classList.toggle('active', i === slideIdx));
+        dots.forEach((d, i) => d.classList.toggle('active', i === slideIdx));
+      }
+
+      function restartTimer() {
+        clearInterval(timer);
+        timer = setInterval(() => goToSlide(slideIdx + 1), 6000);
+      }
+
+      document.getElementById('heroPrevLeft').addEventListener('click', () => {
+        goToSlide(slideIdx - 1);
+        restartTimer();
+      });
+
+      document.getElementById('heroNextRight').addEventListener('click', () => {
+        goToSlide(slideIdx + 1);
+        restartTimer();
+      });
+
+      dots.forEach((dot) => {
+        dot.addEventListener('click', () => {
+          goToSlide(Number(dot.dataset.slide));
+          restartTimer();
+        });
+      });
+
+      restartTimer();
+
+      // العدادات التصاعدية للإحصائيات
+      const counters = document.querySelectorAll('.counter');
+      let counted = false;
+
+      function runCounters() {
+        if (counted) return;
+        counted = true;
+        const duration = 1500;
+        const start = performance.now();
+
+        function step(now) {
+          const p = Math.min((now - start) / duration, 1);
+          const ease = 1 - Math.pow(1 - p, 3);
+          counters.forEach((c) => {
+            const target = Number(c.dataset.target);
+            c.textContent = p < 1 ? Math.floor(ease * target) : target;
+          });
+          if (p < 1) requestAnimationFrame(step);
+        }
+        requestAnimationFrame(step);
+      }
+
+      const statsEl = document.getElementById('stats');
+      if ('IntersectionObserver' in window && statsEl) {
+        const io = new IntersectionObserver((entries) => {
+          if (entries[0].isIntersecting) {
+            runCounters();
+            io.disconnect();
+          }
+        }, { threshold: 0.25 });
+        io.observe(statsEl);
+      } else {
+        runCounters();
+      }
+
+      // نموذج اتصل بنا مع التحقق من الاتصال بالإنترنت قبل الإرسال
+      const feedback = document.getElementById('formFeedback');
+
+      function showFeedback(msg, isError) {
+        feedback.textContent = msg;
+        feedback.className = 'form-feedback show ' + (isError ? 'feedback-err' : 'feedback-ok');
+      }
+
+      document.getElementById('contactForm').addEventListener('submit', (e) => {
+        e.preventDefault();
+
+        if (!navigator.onLine) {
+          showFeedback(dict[lang].form_offline, true);
+          return;
+        }
+
+        const name = document.getElementById('fullName').value.trim();
+        const whatsapp = document.getElementById('whatsapp').value.trim();
+        const email = document.getElementById('email').value.trim();
+        const subject = document.getElementById('subject').value.trim();
+        const inquiry = document.getElementById('inquiry').value.trim();
+
+        const mailSub = encodeURIComponent(`[منظمة السمو الخيرية] ${subject}`);
+        const mailBody = encodeURIComponent(
+          `الاسم: ${name}\n` +
+          `رقم واتساب: ${whatsapp}\n` +
+          `الإيميل: ${email}\n` +
+          `العنوان: ${subject}\n\n` +
+          `الاستفسار:\n${inquiry}`
+        );
+
+        showFeedback(dict[lang].form_success, false);
+        window.location.href = `mailto:a.a.raheem.hamdi@gmail.com?subject=${mailSub}&body=${mailBody}`;
+      });
+
+      renderProjects();
+    })();
+  </script>
+</body>
+</html>
